@@ -1,0 +1,38 @@
+.header-common{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  position: relative;
+  align-items: center;
+  .logo{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 17px;
+    left: 15px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .el-menu{
+    width: inherit;
+    padding: 0 25px;
+    justify-content: right;
+    height: 80px;
+    align-items: center;
+    .el-menu-item{
+      height: 80px;
+      font-size: 16px;
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+    .el-sub-menu__title{
+      font-size: 16px;
+    }
+  }
+  .avatar{
+    box-shadow: rgb(235 235 235) 0px 0px 0px 2px ;
+    border-radius: 50% ;
+  }
+}

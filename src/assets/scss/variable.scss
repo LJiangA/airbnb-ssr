@@ -1,0 +1,55 @@
+$red:red;
+$orange:rgba(255, 81, 0, 0.842);
+
+@mixin line-text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 主体基本样式
+@mixin main-wrapper($tb:40px) {
+  width: 1048px;
+  margin:$tb auto;
+}
+
+// flex布局
+@mixin flex-layout($dir:column, $justify:center, $align:center) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: wrap;
+}
+
+// 多行文本超过行数显示省略号
+@mixin text-overflow($line:1) {
+  display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $line;
+	overflow: hidden;
+}
+
+// 订单占位
+@mixin placeholder-order($text:left) {
+  text-align: $text;
+  position: absolute;
+  top: 80px;
+  background-color: #fff;
+  padding: 0px 10px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+  right: 0px;
+  max-height: 145px;
+  overflow-y: auto;
+  z-index: 15;
+  width: 180px;
+}
+
+// 水平垂直居中
+@mixin center-xy($width: auto,$pos: absolute, $top: 50%, $left: 50%,$trans:translate(-50%, -50%)) {
+	width: $width;
+	position: $pos;
+	top: $top;
+	left: $left;
+	transform: $trans;
+}
